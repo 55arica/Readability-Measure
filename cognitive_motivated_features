@@ -1,0 +1,41 @@
+def cognitive_motivated_features(text):
+
+    SAH = count_hard_and_simple_words(text)
+    CW = find_complex_words(text)
+    LW = find_long_words(text, syllable_threshold=3)
+    RR = readiability(text)
+    SPF = Spache_Readability_Formula(text)
+    rix = RIX(text)
+    lix = LIX(text)
+    GI = Gulpease_Index(text)
+    LRW = calculate_letter_to_word_ratio(text)
+    AUE = avg_u_entity_sentence(text)
+    AE = avg_entity_sentence(text)
+    FLC = final_lexical_span(text)
+    RRE = Raygor_Readability_Estimate(text)
+    frf = FORCAST_Readability_Formula(text)
+    lwf = Linsear_Write_Formula(text)
+    FR = fry_readability(text)
+
+    return {'Number of Simple and Hard/Complex words':    SAH,
+            'Complex Words'                          :    CW,
+            'Long Words '                            :    LW,
+            'Flesch-Kincaid Grade Level'             :    RR['flesch_kincaid_grade'],
+            'Gunning Fog'                            :    RR['Gunning_fog'],
+            'Dale Chall'                             :    RR['Dale Chall'],
+            'Smog index'                             :    RR['Smog index'],
+            'Spache Readability Formula'             :    SPF,
+            'LIX Index'                              :    lix,
+            'RIX Index'                              :    rix,
+            'Gulpease Index'                         :    GI,
+            'Number of letter per word'              :    LRW,
+            'Unique Entity Mention Per Sentence'     :    AUE,
+            'Entity Mention Per Sentence'            :    AE,
+            'Percentage of the lexical chain span'   :    FLC,
+            'Raygor Readability Estimate'            :    RRE,
+            'FORCAST Readability Formula'            :    frf,
+            'Linsear Write Formula'                  :    lwf,
+            'Fry Readability'                        :    FR
+}
+
+cognitive_motivated_features(text)
