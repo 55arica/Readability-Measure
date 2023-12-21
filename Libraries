@@ -1,0 +1,17 @@
+import spacy
+from spacy.tokens import Doc
+from math import exp
+from spacy.tokens import Token
+from nltk.corpus import stopwords
+import re
+from nltk.tokenize import RegexpTokenizer
+from os.path import abspath, join, dirname
+import pyphen
+import nltk
+from nltk.tokenize import word_tokenize, sent_tokenize
+import textstat
+from nltk.corpus import wordnet
+from nltk.stem import WordNetLemmatizer
+from nltk import pos_tag
+from collections import defaultdict
+from nltk.corpus import wordnet as wn
